@@ -1,5 +1,5 @@
 import Toolbar from './components/Toolbar/Toolbar.tsx';
-
+import MessageForm from './components/MessageForm/MessageForm.tsx';
 
 function App() {
 
@@ -8,6 +8,11 @@ function App() {
       <header>
         <Toolbar/>
       </header>
+      <main>
+        <div className="d-flex justify-content-center mt-5 ">
+          <MessageForm />
+        </div>
+      </main>
     </>
   );
 }
