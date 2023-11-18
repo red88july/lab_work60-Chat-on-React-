@@ -2,7 +2,6 @@ import Toolbar from './components/Toolbar/Toolbar.tsx';
 import MessageForm from './components/MessageForm/MessageForm.tsx';
 
 function App() {
-
   return (
     <>
       <header>
