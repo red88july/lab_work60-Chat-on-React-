@@ -1,10 +1,13 @@
+import Toolbar from './components/Toolbar/Toolbar.tsx';
 
 
 function App() {
 
   return (
     <>
-    <span>Test</span>
+      <header>
+        <Toolbar/>
+      </header>
     </>
   );
 }
