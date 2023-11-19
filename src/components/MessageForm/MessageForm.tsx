@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
 import MessageItem from '../MessageItem/MessageItem';
+import React, {useEffect, useState} from 'react';
 import {Messages} from '../../types';
 
 interface Props {
