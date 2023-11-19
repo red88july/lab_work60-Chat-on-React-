@@ -1,16 +1,21 @@
 import React from 'react';
 
-const MessageItem:React.FC = () => {
+interface Props {
+    idValue: string
+    authorValue: string,
+    messageValue: string,
+    dateTimeValue: string,
+}
+
+const MessageItem:React.FC<Props> = ({authorValue, messageValue, dateTimeValue, idValue}) => {
   return (
-    <div className="d-flex flex-column p-2 border border-info border-4 rounded-3">
+    <div className="d-flex flex-column p-2 border border-info border-4 rounded-3 mt-2" id={idValue}>
       <div>
-        <strong>Author: </strong> <i>Sergeev Mikhail</i>
-        <strong className="ms-4">Date: </strong> <i>10.07.88 13 August 2023</i>
+        <strong>Author: </strong> <i>{authorValue}</i>
+        <strong className="ms-4">Date: </strong> <i>{dateTimeValue}</i>
       </div>
       <div className="mt-3">
-        <p><strong>Message:</strong> Поскольку метод floor() является статическим методом объекта Math,
-          вы всегда должны использовать его как Math.floor(),
-          а не пытаться вызывать метод на созданном экземпляре объекта Math (поскольку объект Math не является конструктором).</p>
+        <p><strong>Message:</strong> {messageValue}</p>
       </div>
     </div>
   );

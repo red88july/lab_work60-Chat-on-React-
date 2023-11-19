@@ -8,8 +8,8 @@ function App() {
         <Toolbar/>
       </header>
       <main>
-        <div className="d-flex justify-content-center mt-5 ">
-          <MessageForm />
+        <div className="d-flex justify-content-center mt-5">
+          <MessageForm onSubmit={() => {}}/>
         </div>
       </main>
     </>
