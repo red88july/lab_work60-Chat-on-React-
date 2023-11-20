@@ -29,7 +29,7 @@ const MessageForm: React.FC<Props> = () => {
         console.error('Error fetching messages', error);
       }
     };
-    const intervalId = setInterval(fetchData, 1000);
+    const intervalId = setInterval(fetchData, 3000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -37,7 +37,7 @@ const MessageForm: React.FC<Props> = () => {
     e.preventDefault();
     if (message.author !== '' && message.message !== '') {
       try {
-        setMessage((prevState) => ({ ...prevState, datetime: new Date().toISOString() }));
+        setMessage((prevState) => ({ ...prevState, datetime: new Date().toISOString()}));
 
         const data = new URLSearchParams();
         data.set('author', message.author);
@@ -119,7 +119,7 @@ const MessageForm: React.FC<Props> = () => {
               idValue={String(item._id)}
               authorValue={item.author}
               messageValue={item.message}
-              dateTimeValue={new Date(item.datetime).toLocaleString()}
+                dateTimeValue={new Date(item.datetime).toLocaleString()}
             />
           ))}
         </div>

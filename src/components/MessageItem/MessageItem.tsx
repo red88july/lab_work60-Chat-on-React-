@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 interface Props {
     idValue: string
@@ -8,11 +8,6 @@ interface Props {
 }
 
 const MessageItem:React.FC<Props> = ({authorValue, messageValue, dateTimeValue, idValue}) => {
-
-  useEffect(() => {
-    console.log('Create MesageItem');
-  }, []);
-
   return (
     <div className="d-flex flex-column p-2 border border-info border-4 rounded-3 mt-2" id={idValue}>
       <div>
